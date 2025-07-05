@@ -1,17 +1,60 @@
 {
+  
   "name": "inventaris-app",
+  
   "version": "1.0.0",
+  
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+  
+    
+  "dev": "vite",
+  
+    
+  "build": "vite build",
+  
+    
+  "preview": "vite preview",
+  
+    
+  "test": "vitest"
+  
   },
+  
   "dependencies": {
-    "vue": "^3.4.0",
-    "vue-router": "^4.2.5"
+  
+    
+  "@vue/test-utils": "^2.4.6",
+  
+    
+  "axios": "^1.10.0",
+  
+    
+  "jsdom": "^26.1.0",
+  
+    
+  "pinia": "^3.0.3",
+  
+    
+  "pinia-plugin-persistedstate": "^4.4.1",
+  
+    
+  "vitest": "^3.2.4",
+  
+    
+  "vue": "^3.4.0",
+  
+    
+  "vue-router": "^4.5.1"
+  
   },
+  
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.4",
-    "vite": "^5.0.0"
+  
+    
+  "@vitejs/plugin-vue": "^5.2.4",
+  
+    
+  "vite": "^5.0.0"
+  
   }
 }

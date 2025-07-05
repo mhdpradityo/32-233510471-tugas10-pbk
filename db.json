@@ -1,0 +1,50 @@
+{
+  "barang": [
+    {
+      "id": "0049",
+      "nama": "Motor",
+      "stok": 0,
+      "gambar": "https://tse1.mm.bing.net/th/id/OIP.7i4bPcDuRXoKguXaWPPTrgHaE7?pid=Api&P=0&h=180"
+    }
+  ],
+  "barangMasuk": [
+    {
+      "id": "40e5",
+      "barangId": "0049",
+      "jumlah": 10,
+      "tanggal": "2025-07-05"
+    }
+  ],
+  "barangKeluar": [
+    
+    {
+      "id": "b025",
+      "barangId": "0049",
+      "jumlah": 10,
+      "tanggal": "2025-07-05"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "nama": "Admin Utama",
+      "role": "Admin"
+    },
+    {
+      "id": 2,
+      "username": "operator",
+      "password": "operator123",
+      "nama": "Operator Gudang",
+      "role": "Operator"
+    },
+    {
+      "id": 3,
+      "username": "manager",
+      "password": "manager123",
+      "nama": "Manager",
+      "role": "Manager"
+    }
+  ]
+}
