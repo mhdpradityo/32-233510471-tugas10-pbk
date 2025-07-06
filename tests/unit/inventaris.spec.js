@@ -1,32 +1,28 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { setActivePinia, createPinia } from 'pinia'
-import { useInventarisStore } from '../../src/store/inventaris'
-import axios from 'axios'
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { setActivePinia, createPinia } from "pinia";
+import { useBarangStore } from "../../src/store/barang";
+import axios from "axios";
 
 // Mock axios
-vi.mock('axios')
+vi.mock("axios");
 
-describe('Inventaris Store', () => {
+describe("Inventaris Store", () => {
   beforeEach(() => {
-    setActivePinia(createPinia())
-  })
+    setActivePinia(createPinia());
+  });
 
-  it('fetchBarang updates barangList correctly', async () => {
-    // Arrange: fake data
+  it("fetchBarang updates barangList correctly", async () => {
     const mockData = [
-      { id: 1, nama: 'Laptop', jumlah: 10 },
-      { id: 2, nama: 'Printer', jumlah: 5 }
-    ]
+      { id: 1, nama: "Laptop", jumlah: 10 },
+      { id: 2, nama: "Printer", jumlah: 5 },
+    ];
 
-    axios.get.mockResolvedValue({ data: mockData })
+    axios.get.mockResolvedValue({ data: mockData });
 
-    const store = useInventarisStore()
+    const store = useBarangStore();
+    await store.fetchBarang();
 
-    // Act: panggil action
-    await store.fetchBarang()
-
-    // Assert
-    expect(store.barangList).toEqual(mockData)
-    expect(axios.get).toHaveBeenCalledOnce()
-  })
-})
+    expect(store.barangList).toEqual(mockData);
+    expect(axios.get).toHaveBeenCalledTimes(1); // ✅ ganti ini
+  });
+});
